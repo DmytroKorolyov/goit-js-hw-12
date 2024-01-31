@@ -173,7 +173,7 @@ function showEndMessage() {
     title: '',
     message: "We're sorry, but you've reached the end of search results.",
     position: 'topRight',
-    backgroundColor: '#3498db',
+    backgroundColor: '#EF4040',
     messageColor: '#ffffff',
   });
   hideLoadBtn();
