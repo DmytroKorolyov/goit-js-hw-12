@@ -192,3 +192,167 @@ function initializeLightbox() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Описаний у документації
+// import iziToast from "izitoast";
+// // Додатковий імпорт стилів
+// import "izitoast/dist/css/iziToast.min.css";
+// // Описаний у документації
+// import SimpleLightbox from "simplelightbox";
+// // Додатковий імпорт стилів
+// import "simplelightbox/dist/simple-lightbox.min.css";
+// // Додав новий імпорт Axios
+// import axios from 'axios';
+
+// const refs = {
+//   searchForm: document.querySelector('.search-form'),
+//   wrapperPictures: document.querySelector('.pictures-list'),
+//   loader: document.querySelector('.loader'),
+// };
+
+// refs.searchForm.addEventListener('submit', onSubmitForm);
+
+// async function onSubmitForm(e) {
+//   e.preventDefault();
+//   const symbol = e.target.elements.query.value;
+
+//   refs.loader.style.display = 'inline-block';
+
+//   try {
+//     const data = await getPicture(symbol);
+//     renderPictures(data.hits);
+
+//     if (data.hits.length === 0) {
+//       iziToast.error({
+//         message: 'Sorry, there are no images matching your search query. Please try again!',
+//         position: 'topRight',
+//         backgroundColor: '#EF4040',
+//         messageColor: '#FAFAFB',
+//       });
+//     }
+//   } catch (error) {
+//     console.error(error);
+//   } finally {
+//     refs.loader.style.display = 'none';
+//   }
+
+//   e.target.reset();
+// }
+
+// async function getPicture(symbol) {
+//   const API_KEY = '42004606-5d03e591d800e1e125ea1f7b1';
+//   const BASE_URL = 'https://pixabay.com';
+//   const END_POINT = '/api/';
+
+//   try {
+//     const response = await axios.get(`${BASE_URL}${END_POINT}`, {
+//       params: {
+//         key: API_KEY,
+//         q: symbol,
+//         image_type: 'photo',
+//         orientation: 'horizontal',
+//         safesearch: true,
+//       },
+//     });
+
+//     if (response.status === 200) {
+//       return response.data;
+//     } else {
+//       throw new Error('Unexpected response from server');
+//     }
+//   } catch (error) {
+//     throw new Error('Error fetching data from server');
+//   }
+// }
+
+// function pictureTemplate({
+//   webformatURL,
+//   largeImageURL,
+//   tags,
+//   likes,
+//   views,
+//   comments,
+//   downloads,
+// }) {
+//   return `<li class="gallery-card">
+//     <a class="gallary-card-link" href="${largeImageURL}">
+//       <img src="${webformatURL}" alt="${tags}" />
+//       <ul class="image-info">
+//         <li class="image-item-info">
+//           <p>Likes</p>
+//           <p>${likes}</p>
+//         </li>
+//         <li class="image-item-info">
+//           <p>Views</p>
+//           <p>${views}</p>
+//         </li>
+//         <li class="image-item-info">
+//           <p>Comments</p>
+//           <p>${comments}</p>
+//         </li>
+//         <li class="image-item-info">
+//           <p>Downloads</p>
+//           <p>${downloads}</p>
+//         </li>
+//       </ul>
+//     </a>
+//   </li>`;
+// }
+
+// function picturesTemplate(pictures) {
+//   return pictures.map(pictureTemplate).join('');
+// }
+
+// function renderPictures(pictures) {
+//   const markup = picturesTemplate(pictures);
+//   refs.wrapperPictures.innerHTML = markup;
+
+//   const lightbox = new SimpleLightbox('.gallery-card a.gallary-card-link', {
+//     captionDelay: 250,
+//     captionsData: 'alt',
+//   });
+//   lightbox.refresh();
+// }
+
