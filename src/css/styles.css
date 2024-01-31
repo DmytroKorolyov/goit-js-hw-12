@@ -98,6 +98,7 @@
 
 .wrapper-pictures {
   display: flex;
+  margin-bottom: 32px;
 }
 
 .pictures-list {
@@ -133,4 +134,26 @@
   align-items: center;
   flex-wrap: wrap;
   padding: 8px 0;
+}
+
+
+.load-btn {
+margin: 0 auto;
+  display: block;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+      background: #4E75FF;
+      color: #FFF;
+      
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        /* 150% */
+        letter-spacing: 0.64px;
+        border: transparent;
 }
